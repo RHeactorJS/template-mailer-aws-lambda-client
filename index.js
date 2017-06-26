@@ -15,7 +15,7 @@ TemplateMailerService.prototype.template = function (id, subject, html, text) {
     uri: self.api + '/templates/' + id,
     headers: {
       'x-api-key': self.apiKey,
-      'Content-Type': 'application/vnd.resourceful-humans.template-mailer-aws-lambda.v2+json; charset=utf-8'
+      'Content-Type': 'application/vnd.rheactorjs.template-mailer.v2+json; charset=utf-8'
     },
     body: {subject, html, text},
     json: true
@@ -29,7 +29,7 @@ TemplateMailerService.prototype.config = function (id, email, name) {
     uri: self.api + '/transport/' + id,
     headers: {
       'x-api-key': self.apiKey,
-      'Content-Type': 'application/vnd.resourceful-humans.template-mailer-aws-lambda.v2+json; charset=utf-8'
+      'Content-Type': 'application/vnd.rheactorjs.template-mailer.v2+json; charset=utf-8'
     },
     body: {email, name},
     json: true
@@ -46,7 +46,7 @@ TemplateMailerService.prototype.send = function (transport, template, to, name, 
     uri: self.api + '/send/' + transport + '/' + template,
     headers: {
       'x-api-key': self.apiKey,
-      'Content-Type': 'application/vnd.resourceful-humans.template-mailer-aws-lambda.v2+json; charset=utf-8'
+      'Content-Type': 'application/vnd.rheactorjs.template-mailer.v2+json; charset=utf-8'
     },
     body: data,
     json: true

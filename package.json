@@ -1,5 +1,5 @@
 {
-  "name": "template-mailer-aws-lambda-client",
+  "name": "@rheactorjs/template-mailer-client",
   "description": "A client library for interacting with template-mailer-aws-lambda",
   "main": "index.js",
   "scripts": {
@@ -10,20 +10,22 @@
     "precommit": "npm run lint",
     "commitmsg": "validate-commit-msg"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ResourcefulHumans/template-mailer-aws-lambda-client.git"
+    "url": "https://github.com/RHeactorJS/template-mailer-client.git"
   },
   "author": "Resourceful Humans GmbH <info@resourceful-humans.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ResourcefulHumans/template-mailer-aws-lambda-client/issues"
+    "url": "https://github.com/RHeactorJS/template-mailer-client/issues"
   },
-  "homepage": "https://github.com/ResourcefulHumans/template-mailer-aws-lambda-client#readme",
-  "dependencies": {
+  "homepage": "https://github.com/RHeactorJS/template-mailer-client#readme",
+  "peerDependencies": {
     "lodash": "^4.0.0",
-    "request-promise": "^4.0.0",
-    "template-mailer-aws-lambda": "^2.0.0"
+    "request-promise": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
@@ -36,5 +38,8 @@
     "standard": "^10.0.0-beta.0",
     "validate-commit-msg": "^2.5.0",
     "semantic-release": "^6.3.2"
+  },
+  "engines": {
+    "node": ">=6.10.2"
   }
 }
